@@ -1,0 +1,10 @@
+{
+  "obsidian_vault_path": "/path/to/your/ObsidianVault",
+  "output_path": "/path/to/your/ObsidianVault",
+  "anthropic_api_key_env": "ANTHROPIC_API_KEY",
+  "model": "claude-sonnet-4-5-20250929",
+  "max_tokens": 4096,
+  "file_extensions": [".md"],
+  "exclude_folders": [".obsidian", ".trash", ".git", "Archive"],
+  "days_to_review": 7
+}
