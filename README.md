@@ -25,14 +25,87 @@ The output is a structured markdown file that drops into your Obsidian vault, re
 - **Action-Oriented**: Suggests specific priorities for the coming week
 - **Automated**: Runs on a schedule (Sunday evenings by default)
 
+## 🚀 Two Ways to Run
+
+### Option 1: Ollama (FREE, Local, Private) ⭐ RECOMMENDED
+- ✅ Completely free
+- ✅ Runs locally on your machine
+- ✅ Complete privacy - data never leaves your computer
+- ✅ No API keys needed
+- ⚠️ Requires 8GB+ RAM for best results
+
+**→ [See OLLAMA_SETUP.md for setup instructions](OLLAMA_SETUP.md)**
+
+### Option 2: Anthropic API (Cloud, Premium Quality)
+- ✅ Excellent quality reviews
+- ✅ Simple setup
+- ✅ Fast processing
+- 💰 ~$2-4/month pay-as-you-go
+
+**→ [See SETUP_INSTRUCTIONS.md for setup instructions](SETUP_INSTRUCTIONS.md)**
+
 ## Requirements
 
+**Both Options:**
 - Python 3.7 or higher
 - Obsidian vault (local filesystem access)
-- Anthropic API key ([Get one here](https://console.anthropic.com/))
 - Unix-like system with cron (Linux, macOS) or Task Scheduler (Windows)
 
+**Ollama Only:**
+- 8GB+ RAM (16GB+ for best quality)
+- Ollama installed ([Get it here](https://ollama.ai/download))
+
+**API Only:**
+- Anthropic API key ([Get one here](https://console.anthropic.com/))
+
 ## Quick Start
+
+### Choose Your Version:
+
+#### 🆓 Ollama (Local & Free)
+
+```bash
+# 1. Clone repository
+git clone https://github.com/yourusername/weekly-review.git
+cd weekly-review
+
+# 2. Install Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+
+# 3. Start Ollama and download a model
+ollama serve  # Keep this running
+ollama pull llama3.1:8b  # In another terminal
+
+# 4. Run setup script
+chmod +x setup_automation_ollama.sh
+./setup_automation_ollama.sh
+```
+
+**→ Full instructions: [OLLAMA_SETUP.md](OLLAMA_SETUP.md)**
+
+#### ☁️ Anthropic API (Cloud)
+
+```bash
+# 1. Clone repository
+git clone https://github.com/yourusername/weekly-review.git
+cd weekly-review
+
+# 2. Install dependencies
+pip3 install -r requirements.txt
+
+# 3. Set API key
+export ANTHROPIC_API_KEY='your-key-here'
+
+# 4. Run setup script
+chmod +x setup_automation.sh
+./setup_automation.sh
+```
+
+**→ Full instructions: [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md)**
+
+---
+
+## Detailed Setup (Legacy)
 
 ### 1. Clone or Download This Repository
 
@@ -43,6 +116,12 @@ cd weekly-review
 
 ### 2. Install Dependencies
 
+**For Ollama:**
+```bash
+pip3 install -r requirements.ollama.txt
+```
+
+**For Anthropic API:**
 ```bash
 pip3 install -r requirements.txt
 ```

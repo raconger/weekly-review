@@ -14,8 +14,9 @@ env/
 venv/
 ENV/
 
-# Cron wrapper (contains API key)
+# Cron wrappers (may contain API key)
 run_weekly_review_cron.sh
+run_weekly_review_ollama_cron.sh
 
 # OS files
 .DS_Store

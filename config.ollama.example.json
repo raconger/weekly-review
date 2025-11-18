@@ -1,0 +1,10 @@
+{
+  "obsidian_vault_path": "/path/to/your/ObsidianVault",
+  "output_path": "/path/to/your/ObsidianVault",
+  "ollama_host": "http://localhost:11434",
+  "model": "llama3.1:70b",
+  "file_extensions": [".md"],
+  "exclude_folders": [".obsidian", ".trash", ".git", "Archive"],
+  "days_to_review": 7,
+  "stream_output": true
+}
